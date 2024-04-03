@@ -1,3 +1,6 @@
+import math
+import numpy as np
+
 class UniswapV2Simulator:
 
     def __init__(self):

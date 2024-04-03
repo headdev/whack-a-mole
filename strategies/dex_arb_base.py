@@ -9,7 +9,7 @@ from multiprocessing import Process
 from typing import Any, Dict, Optional, List
 
 from configs import *
-from execution import DexOrder
+from strategies.execution import DexOrder
 from data import DEX, DexStream
 from simulation import OnlineSimulator
 from external import InfluxDB, Telegram

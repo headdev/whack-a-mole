@@ -4,6 +4,7 @@ from web3 import Web3
 from pathlib import Path
 from typing import Any, Dict, List
 
+
 PROTOCOL_TO_ID = {
     'uniswap_v2': 0,
     'sushiswap_v2': 0,
