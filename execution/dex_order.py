@@ -324,7 +324,7 @@ if __name__ == '__main__':
 
     order = DexOrder(private_key=FLASHBOTS_PRIVATE_KEY,
                      signing_key=FLASHBOTS_SIGNING_KEY,
-                     rpc_endpoints={'ethereum': RPC_ENDPOINTS['ethereum']},
+                     rpc_endpoints={'ethereum': RPC_ENDPOINTS['polygon']},
                      contracts={'ethereum': ETHEREUM_BOT_ADDRESS},
                      handlers={'ethereum': ETHEREUM_EXECUTION_HANDLERS})
 
@@ -348,8 +348,8 @@ if __name__ == '__main__':
     #                                           3,
     #                                           block_number))
 
-    usdt = order.web3['ethereum'].eth.contract(address='0xdAC17F958D2ee523a2206206994597C13D831ec7',
+    usdt = order.web3['polygon'].eth.contract(address='0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
                                                abi=ERC20_ABI)
     owner_usdt_balance = usdt.functions.balanceOf(order.sender.address).call()
-    bot_usdt_balance = usdt.functions.balanceOf(order.contracts['ethereum']).call()
+    bot_usdt_balance = usdt.functions.balanceOf(order.contracts['polygon']).call()
     print(owner_usdt_balance, bot_usdt_balance)
