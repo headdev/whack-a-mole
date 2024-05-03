@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
     ETHEREUM_SIMULATOR_ADDRESS = os.getenv('ETHEREUM_SIMULATOR_ADDRESS')
 
-    chain = 'ethereum'
+    chain = 'polygon'
 
     rpc_endpoints = {chain: RPC_ENDPOINTS[chain]}
     tokens = {chain: TOKENS}
@@ -200,12 +200,12 @@ if __name__ == '__main__':
             print(param)
         """
         SUS3ETHUSDT/UNI3ETHUSDT
-        
+
         - Buy: SUS3ETHUSDT
         - Sell: UNI3ETHUSDT
-        
+
         Output:
-        
+
         {'protocol': 1, 'handler': '0x64e8802FE490fa7cc61d3463958199161Bb608A7', 'tokenIn': '0xdAC17F958D2ee523a2206206994597C13D831ec7', 'tokenOut': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'fee': 500, 'amount': 20000000000}
         {'protocol': 1, 'handler': '0x61fFE014bA17989E743c5F6cB21bF9697530B21e', 'tokenIn': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'tokenOut': '0xdAC17F958D2ee523a2206206994597C13D831ec7', 'fee': 500, 'amount': 0}
         """
